@@ -64,7 +64,7 @@ const RandomTire = () => {
             {tires &&
               tires.map((tire) => (
                 <SwiperSlide key={tire._id} className="tire_slide">
-                  <Link href={`/tires/${tire._id}`}>
+                  <Link href={`/tires/${tire.slug}`}>
                     <div className="product-item">
                       <div className="product-item-img">
                         <div className="product-item-set">
