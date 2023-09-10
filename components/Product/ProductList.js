@@ -135,7 +135,7 @@ const ProductList = () => {
         {products &&
           products.map((product) => (
             <div className="col-lg-2 col-md-3 col-sm-6 col-6">
-              <Link href={`/products/${product.slug}`}>
+              <Link href={`/products/${product._id}`}>
                 <div className="product-item">
                   <div className="product-item-img">
                     <div className="product-item-set">
