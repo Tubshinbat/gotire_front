@@ -30,7 +30,7 @@ const WheelList = () => {
                     className="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6"
                     key={wheel._id}
                   >
-                    <Link href={`/wheels/${wheel.slug}`}>
+                    <Link href={`/wheels/${wheel._id}`}>
                       <div className="product-item">
                         <div className="product-item-img">
                           <div className="product-item-set">
