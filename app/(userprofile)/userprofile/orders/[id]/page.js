@@ -15,19 +15,17 @@ import { useEffect, useState } from "react";
 export default function Page({ params: { id } }) {
   const router = useRouter();
   const [data, setData] = useState(null);
-  const { setContentLoad, contentLoad, setAlert } = useNotificationContext();
+  const { contentLoad, setAlert } = useNotificationContext();
   const { setVisible, createQpay, closeOrder } = usePayContext();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     setVisible(false);
     const fetchData = async () => {
-      setContentLoad(true);
       const result = await axios.get(`/orders/user/${id}`);
       if (result && result.data) {
         setData(result.data.data);
       }
-      setContentLoad(false);
     };
 
     fetchData().catch((err) => console.log(err));

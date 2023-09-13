@@ -46,16 +46,16 @@ const PayModule = (props) => {
     setLoading(false);
   };
 
-  useEffect(() => {
-    if (invoice) {
-      setTimeout(async () => {
-        const result = await checkPayment(invoice.sender_invoice_no);
-        if (result == true) {
-          router.push("/userprofile/orders");
-        }
-      }, 1000 * 15);
-    }
-  }, [invoice]);
+  // useEffect(() => {
+  //   if (invoice) {
+  //     setTimeout(async () => {
+  //       const result = await checkPayment(invoice.sender_invoice_no);
+  //       if (result == true) {
+  //         router.push("/userprofile/orders");
+  //       }
+  //     }, 1000 * 15);
+  //   }
+  // }, [invoice]);
 
   useEffect(() => {
     if (isPaid == true) {
