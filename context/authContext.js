@@ -168,7 +168,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const result = await axios.get(`users/userdata`, {
         withCredentials: true,
-        headers: { Cookie: `zayatoken=${cookies.gotiretoken}` },
+        headers: { Cookie: `gotiretoken=${cookies.gotiretoken}` },
       });
 
       if (result.data && result.data.data) {
