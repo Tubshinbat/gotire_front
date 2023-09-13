@@ -20,7 +20,6 @@ export default function Page({ params: { id } }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    setVisible(false);
     const fetchData = async () => {
       const result = await axios.get(`/orders/user/${id}`);
       if (result && result.data) {
@@ -43,6 +42,7 @@ export default function Page({ params: { id } }) {
   };
 
   const handlePay = async () => {
+    setVisible(true);
     if (data) {
       const invoiceData = {
         sender_invoice_no: data.orderNumber,
@@ -116,8 +116,7 @@ export default function Page({ params: { id } }) {
               </button>
               <button
                 className="ctrl-btn pay-bill-btn"
-                onClick={() => {
-                  setVisible(true);
+                onClick={async () => {
                   handlePay();
                 }}
               >
