@@ -2671,6 +2671,7 @@ button.shop-btn:hover {
   display: flex;
   gap: 15px;
   flex-direction: column;
+  width: 100%;
 }
 
 .bank-invoice .item {
