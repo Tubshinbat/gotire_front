@@ -158,6 +158,28 @@ export const AuthProvider = ({ children }) => {
     clear();
   };
 
+  const checkUser = async () => {
+    const token = cookies.gotiretoken;
+    if (!token) {
+      setError("Уучлаарай нэвтэрч орно уу");
+      return false;
+    }
+
+    try {
+      const result = await axios.get(`users/userdata`, {
+        withCredentials: true,
+        headers: { Cookie: `zayatoken=${cookies.gotiretoken}` },
+      });
+
+      if (result.data && result.data.data) {
+        setUser(result.data.data);
+      }
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -176,6 +198,7 @@ export const AuthProvider = ({ children }) => {
         setIsPassword,
         isRedirect,
         setIsRedirect,
+        checkUser,
       }}
     >
       {children}

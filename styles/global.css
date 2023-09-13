@@ -861,8 +861,8 @@ video {
   padding: 16px;
 }
 
-.product-item-dtl h4{
-  color:#000
+.product-item-dtl h4 {
+  color: #000;
 }
 
 .product-item-set {
@@ -980,21 +980,19 @@ footer {
   margin-bottom: 10px;
 }
 
-.page_detials_header span{
-  color:rgb(150, 150, 150);
+.page_detials_header span {
+  color: rgb(150, 150, 150);
   font-size: 12px;
 }
 
-page_detials_header p{
+page_detials_header p {
   padding: 0px;
-  margin:0px;
+  margin: 0px;
 }
 
-page_detials_header h5{
+page_detials_header h5 {
   font-size: 18px;
 }
-
-
 
 .share-box {
   display: flex;
@@ -1541,7 +1539,7 @@ page_detials_header h5{
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 16px;
 }
 
-.order-bill-status h4{
+.order-bill-status h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1551,59 +1549,58 @@ page_detials_header h5{
   font-size: 22px;
 }
 
-.order-bill-status .alert{
+.order-bill-status .alert {
   font-size: 12px;
 }
 
-.order-bill-invoice{
+.order-bill-invoice {
   display: flex;
   flex-direction: column;
 }
 
-.product-bill-list{
+.product-bill-list {
   display: flex;
   flex-direction: column;
-  gap:15px;
+  gap: 15px;
 }
 
-.product-bill-dtls span{
-  color:rgb(179, 179, 179);
+.product-bill-dtls span {
+  color: rgb(179, 179, 179);
   font-size: 12px;
 }
-.product-bill-dtls h6{
+.product-bill-dtls h6 {
   font-size: 14px;
 }
 
-.bill-contacts, .bill-address{
+.bill-contacts,
+.bill-address {
   font-size: 13px;
 }
 
-.order-bill-invoice li{
+.order-bill-invoice li {
   display: flex;
   list-style: none;
   font-size: 13px;
   justify-content: space-between;
   margin-bottom: 4px;
-
 }
 
-.product-bill-item{
+.product-bill-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
 }
-.product-bill-left{
+.product-bill-left {
   display: flex;
   flex-direction: row;
   gap: 15px;
 }
 
-.product-bill-picture img{
+.product-bill-picture img {
   width: 70px;
 }
 
-.col-flex{
+.col-flex {
   flex-direction: column;
 }
 
@@ -1689,24 +1686,24 @@ page_detials_header h5{
   border-radius: 3px;
 }
 
-.cart-btns{
+.cart-btns {
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
 }
 
-.cart-btns button  {
+.cart-btns button {
   height: 48px;
   font-size: 15px;
   padding: 8px 24px;
   border-radius: 8px;
   width: 100%;
 }
-.ctrl-btn{
-    height: 48px;
-      font-size: 15px;
-      padding: 8px 24px;
-      border-radius: 8px;
+.ctrl-btn {
+  height: 48px;
+  font-size: 15px;
+  padding: 8px 24px;
+  border-radius: 8px;
 }
 
 .pay-bill-btn {
@@ -1716,31 +1713,31 @@ page_detials_header h5{
   transition: all 0.4s;
 }
 
-.pay-back-btn{
-  border:1px solid #ccc;
+.pay-back-btn {
+  border: 1px solid #ccc;
   background-color: #e4e4e4;
 }
 
-.pay-bill-btn:hover{
-  background-color: #7676e0
+.pay-bill-btn:hover {
+  background-color: #7676e0;
 }
 
-.customer-info{
-      overflow: hidden;
-        border-radius: 8px;
-        margin-bottom: 24px;
-        background-color: rgb(255, 255, 255);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 6px;
-        padding: 15px;
-        font-size: 14px;
+.customer-info {
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 6px;
+  padding: 15px;
+  font-size: 14px;
 }
 
-.customer-info h6{
-  color:rgb(151, 151, 151);
+.customer-info h6 {
+  color: rgb(151, 151, 151);
   margin-bottom: 10px;
 }
 
-.bill-product-list{
+.bill-product-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1751,13 +1748,11 @@ page_detials_header h5{
   position: relative;
 }
 
-.bill-product img{
+.bill-product img {
   width: 150px;
 }
 
-
-
-.bill-product span{
+.bill-product span {
   position: absolute;
   display: flex;
   z-index: 1;
@@ -1772,7 +1767,7 @@ page_detials_header h5{
   border-radius: 25px;
 }
 
-.order-bill-btns{
+.order-bill-btns {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2191,7 +2186,7 @@ button.shop-btn:hover {
   background-color: rgb(255, 255, 255);
   transition: transform 0s ease 0s, box-shadow 0s ease 0s,
     all 0.2s ease-in-out 0s;
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .profile-info {
@@ -2261,8 +2256,8 @@ button.shop-btn:hover {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 16px;
 }
 
-.profile-card-header{
-margin-bottom: 30px;
+.profile-card-header {
+  margin-bottom: 30px;
 }
 
 .profile-card-header h6 {
@@ -2273,7 +2268,6 @@ margin-bottom: 30px;
 .profile-card-header span {
   font-size: 13px;
   color: rgb(179, 178, 178);
-    
 }
 
 .profile-card-footer {
@@ -2283,76 +2277,74 @@ margin-bottom: 30px;
   margin-top: 10px;
 }
 
-.order-list{
+.order-list {
   display: flex;
   flex-direction: column;
   gap: 7px;
   font-size: 14px;
 }
 
-.order-item{
-      width: 100%;
-        gap: 20px;
-        display: flex;
-        -webkit-box-align: center;
-        align-items: center;
-        -webkit-box-pack: justify;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        overflow: hidden;
-        padding: 8px 16px;
-        margin-bottom: 16px;
-        border-radius: 8px;
-        background-color: rgb(255, 255, 255);
-        position: relative;
+.order-item {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
 }
 
 .order-left,
-.order-right{
+.order-right {
   display: flex;
   flex-direction: row;
   gap: 40px;
-        flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.order-right{
+.order-right {
   justify-content: flex-start;
   gap: 70px;
 }
 
-.order-products{
-  display: flex;
-    flex-direction: column;
-  align-items: flex-end;
-  color:#000;
-}
-
-
-
-.order-price{
+.order-products {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  color:#000;
+  color: #000;
 }
 
-.order-price p{
+.order-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #000;
+}
+
+.order-price p {
   font-size: 16px;
   font-weight: 600;
 }
 
-.order-item p{
+.order-item p {
   padding: 0px;
   margin: 0px;
 }
 
-.order-item span{
+.order-item span {
   font-size: 12px;
-  color:rgb(173, 173, 173)
+  color: rgb(173, 173, 173);
 }
 
-.order-item h6{
-  color:#191947;
+.order-item h6 {
+  color: #191947;
   font-weight: 600;
 }
 
@@ -2517,7 +2509,8 @@ margin-bottom: 30px;
 
 /* pay modal */
 
-.pay-modal-mask,.modal-root {
+.pay-modal-mask,
+.modal-root {
   background-color: rgba(0, 0, 0, 0.45);
   bottom: 0;
   height: 100%;
@@ -2554,11 +2547,8 @@ margin-bottom: 30px;
 
 .payModal-content {
   background-clip: padding-box;
-  background-color: #fff;
   border: 0;
   border-radius: 8px;
-  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
-    0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
   pointer-events: auto;
   position: relative;
 }
@@ -2635,9 +2625,9 @@ margin-bottom: 30px;
   justify-content: center;
   transition: transform 0.2s ease-in-out 0s;
   position: absolute;
-    top: 20px;
-      z-index: 1000;
-      right: 20px;
+  top: 20px;
+  z-index: 1000;
+  right: 20px;
 
   border: none;
   background: none;
@@ -2646,9 +2636,9 @@ margin-bottom: 30px;
   width: 16px;
 }
 
-.payModal-body .modal-content {
+.modal-content {
   display: flex;
-  flex-direction: row !important;
+  flex-direction: row ;
   padding: 20px;
   gap: 20px;
 }
@@ -2949,14 +2939,14 @@ margin-bottom: 30px;
 }
 
 @media (max-width: 1199px) {
-  .order-item{
+  .order-item {
     flex-direction: row;
     justify-content: space-between;
     gap: 10px;
   }
 
   .order-left,
-        .order-right{
+  .order-right {
     flex-direction: column;
     justify-content: space-between;
     gap: 0px;
@@ -3178,26 +3168,27 @@ margin-bottom: 30px;
     padding: 15px 0px;
     padding-bottom: 70px;
   }
-    .payModal-body .modal-content {
-      display: flex;
-      flex-direction: column !important;
-      padding: 20px;
-      gap: 20px;
-    }
+  .payModal-body .modal-content {
+    display: flex;
+    flex-direction: column !important;
+    padding: 20px;
+    gap: 20px;
+  }
 
-    .modal-content .qpay, .modal-content .banks{
-      display: flex;
-      flex: 1 1 100%;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 10px;
-    }
+  .modal-content .qpay,
+  .modal-content .banks {
+    display: flex;
+    flex: 1 1 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-             .modal-content .qpay img {
-              width: 80%;
-             }
+  .modal-content .qpay img {
+    width: 80%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3205,15 +3196,17 @@ margin-bottom: 30px;
     margin-bottom: 10px;
   }
 
-    .order-item ,.order-price, .order-products{
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  .order-item,
+  .order-price,
+  .order-products {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-        .order-left,
-        .order-right{
-          width: 100%;
-        }
+  .order-left,
+  .order-right {
+    width: 100%;
+  }
 
   .side-search-box {
     width: 90%;
@@ -3227,19 +3220,35 @@ margin-bottom: 30px;
 }
 
 @media (max-width: 576px) {
-  .payModal{
-    width: 85%;
+.slider-container h2 {
+    color: #fff;
+    font-size: 1.6rem;
   }
-  .pay-modal-wrap {
-      bottom: 0;
-      left: 0;
-      outline: 0;
-      overflow: auto;
-      position: fixed;
-      right: 0;
-      top: 0;
-      z-index: 10000000;
-    }
+
+  .modal-content {
+    flex-direction: column;
+  }
+
+  .modal-content .qpay img {
+    width: 86%;
+  }
+
+  .modal-content .qpay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(228, 228, 228);
+    ;
+    padding-bottom: 20px;
+  }
+
+  .modal-content .banks {
+    width: 100%;
+    flex: 1 1 100%;
+  }
   .tire-search-box {
     width: 95%;
   }
@@ -3250,26 +3259,26 @@ margin-bottom: 30px;
   .custom-container {
     padding: 0px 10px;
   }
-  .product-bill-item{
-    gap:10px;
+  .product-bill-item {
+    gap: 10px;
     flex-direction: column;
   }
-    .order-bill-invoice li{
-      display: flex;
-      flex-direction: column;
-    }
+  .order-bill-invoice li {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .order-bill-btns{
-      flex-direction: column;
-      gap: 10px;
-    }
+  .order-bill-btns {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .order-bill-btns button{
-      width: 100%;
-    }
-section{
-      padding-bottom: 90px;
-}
+  .order-bill-btns button {
+    width: 100%;
+  }
+  section {
+    padding-bottom: 90px;
+  }
   .pd-4 {
     padding: 10px 0px;
     padding-bottom: 70px;

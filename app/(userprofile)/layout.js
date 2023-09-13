@@ -9,14 +9,35 @@ import { useEffect } from "react";
 import { useCookies } from "react-cookie";
 
 export default function RootLayout({ children }) {
-  const { user } = useAuthContext();
-  const { contentLoad } = useNotificationContext();
+  const { user, checkUser } = useAuthContext();
+  const { contentLoad, setContentLoad } = useNotificationContext();
 
   useEffect(() => {
-    if (!user) {
-      redirect("/login");
-    }
-  }, [user]);
+    setContentLoad(true);
+    const check = async () => {
+      const result = await checkUser();
+      if (result == false) {
+        window.location.replace("/login");
+      }
+      setContentLoad(false);
+    };
+
+    check().catch((error) => {});
+  }, []);
+
+  if (contentLoad == true) {
+    return (
+      <>
+        <section className="pd-4">
+          <div className="custom-container">
+            <div className="row">
+              <Loader />
+            </div>
+          </div>
+        </section>
+      </>
+    );
+  }
 
   return (
     <>
