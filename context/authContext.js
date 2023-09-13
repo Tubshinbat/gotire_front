@@ -171,9 +171,6 @@ export const AuthProvider = ({ children }) => {
         headers: { Cookie: `gotiretoken=${cookies.gotiretoken}` },
       });
 
-      if (result.data && result.data.data) {
-        setUser(result.data.data);
-      }
       return true;
     } catch {
       return false;
