@@ -34,24 +34,7 @@ export default function Page() {
       {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
         <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
       ) : null}
-      <div
-        className="pageDetailsHeader"
-        style={{
-          background: `url(/images/header.jpg)`,
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="container">
-          <h2> Бүртгүүлэх </h2>
-          <div className="bread">
-            <li>
-              <Link href="/"> Нүүр </Link>
-            </li>
-            <span> /</span>
-            <li> Бүртгүүлэх </li>
-          </div>
-        </div>
-      </div>
+
       <section>
         <div className="container">
           <div className="login_page">

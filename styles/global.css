@@ -2047,20 +2047,24 @@ button.shop-btn:hover {
 
 .login_page {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 476px;
-  min-height: calc(100vh - 70vh);
-  padding: 70px 0;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 476px;
+    min-height: calc(100vh - 70vh);
+    padding: 70px 0;
+    border-radius: 20px;
+    padding: 40px 50px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px 0px;
 }
 
 .login_page h4 {
   margin-bottom: 20px;
-  letter-spacing: -1px;
-  font-weight: 600;
-  font-size: 22px;
+  font-size: 16px;
+  color: #001829;
 }
 
 .login_page .loginInput {
