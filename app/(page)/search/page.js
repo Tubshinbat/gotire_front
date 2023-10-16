@@ -58,6 +58,24 @@ export default async function Page() {
     const name = searchParams.get("name");
     if (name) setSearchData((bs) => ({ ...bs, name }));
     else setSearchData((bs) => ({ ...bs, name: "" }));
+
+    const fetchData = async (text) => {
+      const { tires, products, wheels, setProducts } = await getSearchData(
+        text
+      );
+      setTires(tires);
+      setProduct(products);
+      setWheels(wheels);
+      setSetProducts(setProducts);
+      setLoading(() => false);
+    };
+
+    if (name) {
+      fetchData(name).catch((error) => console.log(error));
+      setLoading(() => false);
+    } else {
+      setLoading(() => false);
+    }
   }, [searchParams]);
 
   return (
