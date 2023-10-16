@@ -73,6 +73,11 @@ const SearchBox = () => {
     }
   };
 
+  useEffect(() => {
+    const name = searchParams.get("name");
+    if (name) queryBuild("name", name);
+  }, [searchParams]);
+
   const activeCheck = (name, value) => {
     let params = searchParams.get(name);
     let setParams = [];

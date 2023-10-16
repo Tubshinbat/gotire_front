@@ -63,6 +63,7 @@ export const SearchSetProductProvider = ({ children }) => {
       "maxprice",
       "setOf",
       "sort",
+      "name",
     ];
 
     searchFields.map((field) => {
@@ -124,6 +125,7 @@ export const SearchSetProductProvider = ({ children }) => {
       "maxprice",
       "setOf",
       "sort",
+      "name",
     ];
 
     searchFields.map((field) => {

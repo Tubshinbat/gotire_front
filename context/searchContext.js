@@ -103,6 +103,7 @@ export const SearchProvider = ({ children }) => {
       "maxprice",
       "sort",
       "categoryname",
+      "name",
     ];
 
     searchFields.map((field) => {

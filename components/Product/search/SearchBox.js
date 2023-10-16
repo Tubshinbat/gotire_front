@@ -23,6 +23,11 @@ const SearchBox = () => {
     fetchData().catch((err) => console.log(err));
   }, []);
 
+  useEffect(() => {
+    const name = searchParams.get("name");
+    name && queryBuild("name", name);
+  }, [searchParams]);
+
   const queryBuild = (name, value, isSame = false) => {
     let query = "?";
     let params = "";

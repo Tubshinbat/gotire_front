@@ -306,6 +306,7 @@ export const SearchWheelProvider = ({ children }) => {
       "minprice",
       "maxprice",
       "setOf",
+      "name",
       "sort",
     ];
 

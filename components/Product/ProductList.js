@@ -10,6 +10,7 @@ import { useNotificationContext } from "context/notificationContext";
 import BlockLoad from "components/Generals/BlockLoad";
 
 import { getProducts } from "lib/product";
+import { useEffect } from "react";
 
 const ProductList = () => {
   const {
@@ -86,6 +87,11 @@ const ProductList = () => {
       next().catch((error) => console.log(error));
     }
   };
+
+  useEffect(() => {
+    const name = searchParams.get("name");
+    name && queryBuild("name", name);
+  }, [searchParams]);
 
   return (
     <div className="product-main">

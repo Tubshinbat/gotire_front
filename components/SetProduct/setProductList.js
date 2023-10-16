@@ -66,6 +66,11 @@ const SetProductList = () => {
     queryBuild(name, setParams, isSame);
   };
 
+  useEffect(() => {
+    const name = searchParams.get("name");
+    name && queryBuild("name", name);
+  }, [searchParams]);
+
   const handleChange = (value) => {
     queryBuild("sort", value);
   };

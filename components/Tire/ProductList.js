@@ -74,6 +74,11 @@ const ProductList = () => {
     }
   }, [wheelsize]);
 
+  useEffect(() => {
+    const name = searchParams.get("name");
+    if (name) queryBuild("name", name);
+  }, [searchParams]);
+
   const handleChange = (value) => {
     queryBuild("sort", value);
   };

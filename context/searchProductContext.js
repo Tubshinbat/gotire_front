@@ -44,7 +44,13 @@ export const SearchProductProvider = ({ children }) => {
     let query = "";
     let fields = [];
 
-    const searchFields = ["categoryname", "minprice", "maxprice", "sort"];
+    const searchFields = [
+      "categoryname",
+      "minprice",
+      "maxprice",
+      "sort",
+      "name",
+    ];
 
     searchFields.map((field) => {
       if (searchParams.get(field)) {
@@ -87,7 +93,13 @@ export const SearchProductProvider = ({ children }) => {
     let query = "";
     let fields = [];
 
-    const searchFields = ["categoryname", "minprice", "maxprice", "sort"];
+    const searchFields = [
+      "categoryname",
+      "minprice",
+      "maxprice",
+      "sort",
+      "name",
+    ];
 
     searchFields.map((field) => {
       if (searchParams.get(field)) {

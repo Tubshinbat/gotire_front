@@ -26,10 +26,12 @@ const MobileMenu = () => {
 
   return (
     <>
-      <div className="burger__menu" onClick={handleToggle}>
-        <span className="line"> </span>
-        <span className="line"> </span>
-        <span className="line"> </span>
+      <div className="m-menu">
+        <div className="burger__menu" onClick={handleToggle}>
+          <span className="line"> </span>
+          <span className="line"> </span>
+          <span className="line"> </span>
+        </div>
       </div>
       <div
         className={`menuMobile  ${
@@ -37,7 +39,7 @@ const MobileMenu = () => {
         }`}
       >
         <h5>
-          <FontAwesomeIcon icon={faClose} /> Үндсэн цэс
+          <FontAwesomeIcon icon={faClose} onClick={handleToggle} /> Үндсэн цэс
         </h5>
         <ul>{menus}</ul>
         <div className="contactMobile">

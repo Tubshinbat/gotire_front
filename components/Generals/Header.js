@@ -6,14 +6,17 @@ const { useCartContext } = require("context/cartContext");
 const { useMenuContext } = require("context/menuContext");
 const { useWebInfoContext } = require("context/webinfoContext");
 import { useAuthContext } from "context/authContext";
-const { useEffect } = require("react");
+const { useEffect, useState, use } = require("react");
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartShopping,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import MobileMenu from "components/Generals/MobileMenu";
 import Aos from "aos";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const Header = () => {
   const { info, getInfo } = useWebInfoContext();
@@ -21,6 +24,9 @@ const Header = () => {
   const { user } = useAuthContext();
   const { cart } = useCartContext();
   const router = useRouter();
+  const [searchData, setSearchData] = useState({});
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
 
   useEffect(() => {
     function onScroll() {
@@ -62,6 +68,36 @@ const Header = () => {
     window.addEventListener("scroll", onScroll);
   }, []);
 
+  const handleChange = (e) => {
+    setSearchData((bs) => ({ ...bs, [e.target.name]: e.target.value }));
+  };
+
+  const handleSearch = () => {
+    switch (searchData.type) {
+      case "Дугуй":
+        router.push(`/tires?name=${searchData.search}`);
+        break;
+      case "Обуд":
+        router.push(`/wheels?name=${searchData.search}`);
+        break;
+      case "Дугуй, обуд":
+        router.push(`/setproducts?name=${searchData.search}`);
+        break;
+      case "Сэлбэгүүд":
+        router.push(`/products?name=${searchData.search}`);
+        break;
+      default:
+        router.push(`/search?name=${searchData.search}`);
+        break;
+    }
+  };
+
+  useEffect(() => {
+    const name = searchParams.get("name");
+    if (name) setSearchData((bs) => ({ ...bs, name }));
+    else setSearchData((bs) => ({ ...bs, name: "" }));
+  }, [searchParams]);
+
   return (
     <>
       <div className="top-header">
@@ -77,6 +113,38 @@ const Header = () => {
                     />
                   </a>
                 )}
+              </div>
+              <div className="search-main">
+                <select
+                  className="search-select"
+                  name="type"
+                  onChange={handleChange}
+                >
+                  <option> Бүгд </option>
+                  <option selected={pathname === "/tires"}> Дугуй </option>
+                  <option selected={pathname === "/wheels"}> Обуд </option>
+                  <option selected={pathname === "/setproducts"}>
+                    Дугуй, обуд
+                  </option>
+                  <option selected={pathname === "/products"}>
+                    Сэлбэгүүд{" "}
+                  </option>
+                </select>
+                <input
+                  className="search-input"
+                  name="search"
+                  placeholder="Хайлт хийхдээ 195/65/15, Хол 5-14 г.м"
+                  onChange={handleChange}
+                  defaultValue={searchData.name !== null && searchData.name}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleSearch();
+                    }
+                  }}
+                />
+                <button className="search-btn" onClick={handleSearch}>
+                  <FontAwesomeIcon icon={faMagnifyingGlass} />
+                </button>
               </div>
             </div>
             <div className="header-right">
@@ -97,19 +165,25 @@ const Header = () => {
                   </Link>
                 )}
               </div>
-
+              <div
+                className="header-mobile-search"
+                onClick={() => router.push("/search")}
+              >
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </div>
               <div className="header-cart" onClick={() => router.push("/cart")}>
                 <img src="/images/shopping-cart.png" />
                 <span>{cart.length}</span>
               </div>
-              <MobileMenu />
             </div>
           </div>
         </div>
-      </div>
-      <div className="top-menu">
-        <div className="custom-container">
-          <ul className="headerMenu">{menus}</ul>
+
+        <div className="top-menu">
+          <div className="custom-container">
+            <ul className="headerMenu">{menus}</ul>
+            <MobileMenu />
+          </div>
         </div>
       </div>
     </>

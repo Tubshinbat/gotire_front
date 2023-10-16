@@ -15,6 +15,14 @@
 /*----------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
+
+*{
+      margin: 0px;
+        padding: 0px;
+  
+    
+        overflow-x: hidden;
+}
 section {
   padding: 70px 0px;
 }
@@ -192,6 +200,23 @@ video {
 ----------- Header ----------------
 --------------------------------- */
 
+.search-title{
+  display: flex;
+  align-items: center;
+gap: 5px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  color:#070720;
+  font-size: 14px;
+}
+.search-btn{
+  border:none;
+  background:#fff;
+  font-size: 12px;
+  padding-right: 14px;
+  color:#acacac;
+}
+
 .top-line {
   height: 3px;
   width: 100%;
@@ -236,6 +261,12 @@ video {
   padding-left: 15px;
   font-size: 12px;
   height: 30px;
+}
+
+.m-menu{
+    display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
 }
 
 .headerMenu {
@@ -418,6 +449,25 @@ video {
 /* ---------------------------------
 --------- Header search ------------
 --------------------------------- */
+
+.header-mobile-search{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #25256b;
+  border-radius: 35px;
+  width: 35px;
+  height: 35px;
+  color:#fff;
+}
+
+.header-mobile-search svg,
+.header-mobile-search i{
+  color:#fff;
+  font-size: 12px;
+  width: 12px;
+}
 
 .header-search {
   position: relative;
@@ -2862,6 +2912,41 @@ button.shop-btn:hover {
   background: none;
 }
 
+/* HEADER CSS SEARCH */
+
+    .search-main {
+      display: flex;
+      flex-direction: row;
+      border-radius: 3px;
+      overflow: hidden;
+      width: 100%;
+        max-width: 600px;
+    }
+
+             .search-main.search-mobile{
+              display: none;
+      width: 100% ;
+      max-width: 100% !important;
+      margin-bottom: 20px;
+    }
+
+    .search-select{
+      padding-left: 7px;
+      background: rgb(243, 243, 243);
+      border:none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      font-size: 12px;
+    }
+    
+    .search-input{
+      background: #fff;
+      border: none;
+      font-size: 12px;
+      padding: 10px;
+     
+    }
+
 /* ---------------------------------
 ----------- Responsive CSS ----------------
 --------------------------------- */
@@ -2973,7 +3058,7 @@ button.shop-btn:hover {
   .combobox-search,
   .topBtn,
   .container-bread,
-  .top-menu,
+
   .product-main-header div {
     display: none;
   }
@@ -3074,6 +3159,8 @@ button.shop-btn:hover {
     margin-bottom: 5px;
   }
 
+
+
   .headerMenu,
   .auth-btns,
   footer {
@@ -3088,7 +3175,7 @@ button.shop-btn:hover {
     cursor: pointer;
     z-index: 1;
     justify-content: space-between;
-    margin-left: 30px;
+    margin:5px 0px;
   }
   .burger__menu span {
     width: 100%;
@@ -3165,6 +3252,13 @@ button.shop-btn:hover {
 }
 
 @media (max-width: 991px) {
+
+.header-cart span {
+    
+    right: 0px;
+    top: 1px;
+  }
+
   .side-margin-top {
     top: 0px;
     margin-top: 30px;
@@ -3197,9 +3291,29 @@ button.shop-btn:hover {
 }
 
 @media (max-width: 767px) {
+  .header-mobile-search{
+    display: flex;
+  }
   .search-inputs {
     margin-bottom: 10px;
   }
+
+  .search-main{
+    display: none;
+  }
+
+    .search-main.search-mobile{
+      display: flex;
+    }
+
+    .search-main.search-mobile .search-input,
+    .search-main.search-mobile .search-btn{
+          background: #d9d9d9;
+    }
+
+    .product-item{
+      margin-bottom: 20px !important;
+    }
 
   .order-item,
   .order-price,

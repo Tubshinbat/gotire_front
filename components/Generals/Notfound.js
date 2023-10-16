@@ -9,7 +9,7 @@ const NotFound = () => {
         <div className="container">
           <div className="notFound">
             <FontAwesomeIcon icon={faInbox} />
-            <h2> Хуудас </h2>
+            <h2> Өгөгдөл </h2>
             <p> олдсонгүй </p>
             <Link href="/"> Нүүр хуудас</Link>
           </div>
