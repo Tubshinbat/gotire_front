@@ -51,7 +51,7 @@ export default async function Page() {
   }, []);
 
   const handleSearch = () => {
-    router.push(`/search?name=${searchText.current.value}`);
+    router.replace(`/search?name=${searchText.current.value}`);
   };
 
   useEffect(() => {
