@@ -1,3 +1,4 @@
+"use client";
 import base from "lib/base";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -10,6 +11,10 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 const MobileMenu = () => {
   const { info, getInfo } = useWebInfoContext();
   const { menus, getMenu } = useMenuContext();
+
+  useEffect(() => {
+    return () => setActive(false);
+  });
 
   const [active, setActive] = useState(false);
 

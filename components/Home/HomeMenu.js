@@ -37,7 +37,8 @@ const HomeMenu = () => {
             <div className="col-xl-2 col-lg-3 col-md-3 col-md-4 col-sm-4 col-6">
               <button
                 className="single-category"
-                onClick={() => handleSearch("tire")}
+                // onClick={() => handleSearch("tire")}
+                onClick={() => router.push(`/tires`)}
               >
                 <div className="single-category-img">
                   <img src="/images/tire_category.png" />
@@ -48,7 +49,8 @@ const HomeMenu = () => {
             <div className="col-xl-2 col-lg-3 col-md-3 col-md-4 col-sm-4 col-6">
               <button
                 className="single-category"
-                onClick={() => handleSearch("wheel")}
+                // onClick={() => handleSearch("wheel")}
+                onClick={() => router.push(`/wheels`)}
               >
                 <div className="single-category-img">
                   <img src="/images/wheel_category.png" />
@@ -59,7 +61,8 @@ const HomeMenu = () => {
             <div className="col-xl-2 col-lg-3 col-md-3 col-md-4 col-sm-4 col-6">
               <button
                 className="single-category"
-                onClick={() => handleSearch("setproduct")}
+                // onClick={() => handleSearch("setproduct")}
+                onClick={() => router.push(`/setproducts`)}
               >
                 <div className="single-category-img">
                   <img src="/images/set_category.png" />
